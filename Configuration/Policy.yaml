@@ -1,0 +1,16 @@
+privilegeTargets:
+  'Neos\Neos\Security\Authorization\Privilege\ModulePrivilege':
+    'Milly.Albums:BackendModule':
+      matcher: 'milly/albums'
+
+  Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    'Milly.CrudUI.Showcase:allModuleMethods':
+      matcher: 'method(Milly\CrudUI\Showcase\Controller\.*Controller->.*Action())'
+
+roles:
+  'Neos.Neos:Editor':
+    privileges:
+      - privilegeTarget: 'Milly.Albums:BackendModule'
+        permission: GRANT
+      - privilegeTarget: 'Milly.CrudUI.Showcase:allModuleMethods'
+        permission: GRANT

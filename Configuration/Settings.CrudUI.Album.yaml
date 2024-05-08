@@ -1,0 +1,16 @@
+Milly:
+  CrudUI:
+    Milly:
+      CrudUI:
+        Showcase:
+          Album:
+            parent: artist
+            label:
+              one: Album
+              many: Albums
+            properties:
+              title:
+                label: Title
+            relations:
+              tracks:
+                label: Tracks

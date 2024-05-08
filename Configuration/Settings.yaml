@@ -1,0 +1,13 @@
+Neos:
+  Neos:
+    modules:
+      milly:
+        submodules:
+          albums:
+            label: 'Albums'
+            controller: Milly\CrudUI\Showcase\Controller\Backend\ArtistController
+            description: ''
+            icon: 'fas fa-database'
+            additionalResources:
+              styleSheets:
+                - 'resource://Milly.CrudUI/Public/Css/neosBackend.css'

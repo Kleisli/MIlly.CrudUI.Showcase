@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "milly/crudui-showcase",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Milly\\CrudUI\\Showcase\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Milly.CrudUI.Showcase"
+        }
+    }
+}
