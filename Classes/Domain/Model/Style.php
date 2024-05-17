@@ -17,5 +17,5 @@ class Style
     /**
      * @var string
      */
-    public string $name;
+    public string $name = '';
 }

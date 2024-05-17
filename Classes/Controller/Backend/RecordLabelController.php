@@ -6,12 +6,12 @@ namespace Milly\CrudUI\Showcase\Controller\Backend;
  */
 
 use Milly\CrudUI\Controller\CrudControllerTrait;
-use Milly\CrudUI\Showcase\Domain\Model\Artist;
+use Milly\CrudUI\Showcase\Domain\Model\RecordLabel;
 use Neos\Flow\Annotations as Flow;
 use Neos\Neos\Controller\Backend\ModuleController;
 
-class ArtistController extends ModuleController
+class RecordLabelController extends ModuleController
 {
-    const ENTITY_CLASSNAME = Artist::class;
+    const ENTITY_CLASSNAME = RecordLabel::class;
     use CrudControllerTrait;
 }

@@ -1,0 +1,9 @@
+Milly:
+  CrudUI:
+    entities:
+      Milly\CrudUI\Showcase\Domain\Model\RecordLabel:
+        label:
+          one: RecordLabel
+          many: RecordLabels
+        properties:
+          name: []

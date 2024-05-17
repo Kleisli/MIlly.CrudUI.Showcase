@@ -1,7 +1,7 @@
 {
     "description": "",
     "type": "neos-package",
-    "name": "milly/crudui-showcase",
+    "name": "kleisli/milly-crudui-showcase",
     "require": {
         "neos/flow": "*"
     },

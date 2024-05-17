@@ -1,16 +1,32 @@
 Milly:
   CrudUI:
-    Milly:
-      CrudUI:
-        Showcase:
-          Album:
-            parent: artist
-            label:
-              one: Album
-              many: Albums
-            properties:
-              title:
-                label: Title
-            relations:
-              tracks:
-                label: Tracks
+    entities:
+      Milly\CrudUI\Showcase\Domain\Model\Album:
+        parent: artist
+        views:
+          relation:
+            properties: [releaseDate]
+            showColumnHeaders: true
+        label:
+          one: Album
+          many: Albums
+        properties:
+          title: []
+          artist:
+            type: select
+            readonly: true
+            options:
+              link: true
+              repository: Milly\CrudUI\Showcase\Domain\Repository\ArtistRepository
+          isAiGenerated:
+            type: booleanCheckbox
+          coverImage:
+            type: image
+          releaseDate:
+            type: date
+          recordLabel:
+            type: select
+            options:
+              repository: Milly\CrudUI\Showcase\Domain\Repository\RecordLabelRepository
+        relations:
+          tracks: []

@@ -1,0 +1,9 @@
+Milly:
+  CrudUI:
+    entities:
+      Milly\CrudUI\Showcase\Domain\Model\Style:
+        label:
+          one: Style
+          many: Styles
+        properties:
+          name: []

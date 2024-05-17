@@ -1,15 +1,22 @@
 Milly:
   CrudUI:
-    Milly:
-      CrudUI:
-        Showcase:
-          Artist:
-            label:
-              one: Artist
-              many: Artists
-            properties:
-              name:
-                label: Name
-            relations:
-              albums:
-                label: Albums
+    entities:
+      Milly\CrudUI\Showcase\Domain\Model\Artist:
+        label:
+          one: Artist
+          many: Artists
+        properties:
+          name: []
+          biography:
+            type: textarea
+          styles:
+            type: multiSelect
+            options:
+              repository: Milly\CrudUI\Showcase\Domain\Repository\StyleRepository
+        relations:
+          albums:  []
+        views:
+          index:
+            properties: [name, styles]
+            orderBy: [name]
+            showColumnHeaders: true

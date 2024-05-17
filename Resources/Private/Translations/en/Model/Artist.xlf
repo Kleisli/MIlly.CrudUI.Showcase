@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="Model/Artist" product-name="Milly.CrudUI.Showcase" source-language="en" datatype="plaintext">
+        <body>
+            <group id="label" restype="x-gettext-plurals">
+                <trans-unit id="label[0]" xml:space="preserve">
+                    <source>Artist</source>
+                </trans-unit>
+                <trans-unit id="label[1]" xml:space="preserve">
+                    <source>Artists</source>
+                </trans-unit>
+            </group>
+            <trans-unit id="name" xml:space="preserve">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="styles" xml:space="preserve">
+                  <source>Music styles</source>
+              </trans-unit>
+        </body>
+    </file>
+</xliff>

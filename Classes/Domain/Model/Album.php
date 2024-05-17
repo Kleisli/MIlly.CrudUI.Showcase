@@ -8,6 +8,7 @@ namespace Milly\CrudUI\Showcase\Domain\Model;
 use Doctrine\Common\Collections\Collection;
 use Neos\Flow\Annotations as Flow;
 use Doctrine\ORM\Mapping as ORM;
+use Neos\Flow\ResourceManagement\PersistentResource;
 
 /**
  * @Flow\Entity
@@ -26,7 +27,7 @@ class Album
      * @ORM\OrderBy({"sorting" = "ASC"})
      * @var Collection<Track>
      */
-    public $tracks;
+    public Collection $tracks;
 
     /**
      * @var string
@@ -43,5 +44,17 @@ class Album
      * @var \DateTime|null
      */
     public ?\DateTime $releaseDate;
+
+    /**
+     * @var ?PersistentResource
+     * @ORM\OneToOne(cascade={"all"}, orphanRemoval=true)
+     */
+    public ?PersistentResource $coverImage = null;
+
+    /**
+     * @var ?RecordLabel
+     * @ORM\ManyToOne
+     */
+    public ?RecordLabel $recordLabel;
 
 }

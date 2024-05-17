@@ -1,13 +1,12 @@
 Milly:
   CrudUI:
-    Milly:
-      CrudUI:
-        Showcase:
-          Track:
-            parent: album
-            label:
-              one: Track
-              many: Tracks
-            properties:
-              title:
-                label: Title
+    entities:
+      Milly\CrudUI\Showcase\Domain\Model\Track:
+        parent: album
+        label:
+          one: Track
+          many: Tracks
+        properties:
+          title: []
+          audio:
+            type: audio

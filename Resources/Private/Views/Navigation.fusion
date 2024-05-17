@@ -1,0 +1,46 @@
+prototype(Milly.CrudUI.Showcase:Views.Navigation) < prototype(Neos.Fusion:Join) {
+    discCollection = Neos.Fusion:Link.Action {
+        content = 'Disc collection'
+        href {
+            action = 'index'
+            controller = 'Backend\\Artist'
+        }
+        class = Neos.Fusion:Join {
+            base = 'neos-button'
+            active = 'neos-active'
+            active.@if.active = ${request.controllerName == 'Backend\Artist'}
+            @glue = ' '
+        }
+    }
+
+    styles = Neos.Fusion:Link.Action {
+        content = 'Styles'
+        href {
+            action = 'index'
+            controller = 'Backend\\Style'
+        }
+        class = Neos.Fusion:Join {
+            base = 'neos-button'
+            active = 'neos-active'
+            active.@if.active = ${request.controllerName == 'Backend\Style'}
+            @glue = ' '
+        }
+    }
+
+    labels = Neos.Fusion:Link.Action {
+        content = 'Record labels'
+        href {
+            action = 'index'
+            controller = 'Backend\\RecordLabel'
+        }
+        class = Neos.Fusion:Join {
+            base = 'neos-button'
+            active = 'neos-active'
+            active.@if.active = ${request.controllerName == 'Backend\RecordLabel'}
+            @glue = ' '
+        }
+    }
+
+    @glue = ' '
+    @process.wrap = ${'<nav>'+value+'</nav>'}
+}

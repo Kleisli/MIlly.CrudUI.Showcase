@@ -10,6 +10,7 @@ use Milly\Sortable\Domain\Model\SortableModelTrait;
 use Neos\Flow\Annotations as Flow;
 use Doctrine\ORM\Mapping as ORM;
 use Neos\Flow\Persistence\QueryInterface;
+use Neos\Flow\ResourceManagement\PersistentResource;
 
 /**
  * @Flow\Entity
@@ -28,6 +29,12 @@ class Track
      * @var string
      */
     public string $title = '';
+
+    /**
+     * @var ?PersistentResource
+     * @ORM\OneToOne(cascade={"all"}, orphanRemoval=true)
+     */
+    public ?PersistentResource $audio = null;
 
     /**
      * @param QueryInterface $query

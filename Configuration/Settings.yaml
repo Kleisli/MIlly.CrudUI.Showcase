@@ -2,12 +2,16 @@ Neos:
   Neos:
     modules:
       milly:
+        label: Milly.CrudUI
+        controller: Neos\Neos\Controller\Module\ManagementController
+        position: 'after content'
+        icon: 'far fa-list-alt'
         submodules:
-          albums:
-            label: 'Albums'
+          music:
+            label: 'Music'
             controller: Milly\CrudUI\Showcase\Controller\Backend\ArtistController
             description: ''
-            icon: 'fas fa-database'
+            icon: 'fas fa-compact-disc'
             additionalResources:
               styleSheets:
                 - 'resource://Milly.CrudUI/Public/Css/neosBackend.css'

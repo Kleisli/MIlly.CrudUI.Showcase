@@ -1,7 +1,7 @@
 privilegeTargets:
   'Neos\Neos\Security\Authorization\Privilege\ModulePrivilege':
-    'Milly.Albums:BackendModule':
-      matcher: 'milly/albums'
+    'Milly.Music:BackendModule':
+      matcher: 'milly/music'
 
   Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
     'Milly.CrudUI.Showcase:allModuleMethods':
@@ -10,7 +10,7 @@ privilegeTargets:
 roles:
   'Neos.Neos:Editor':
     privileges:
-      - privilegeTarget: 'Milly.Albums:BackendModule'
+      - privilegeTarget: 'Milly.Music:BackendModule'
         permission: GRANT
       - privilegeTarget: 'Milly.CrudUI.Showcase:allModuleMethods'
         permission: GRANT

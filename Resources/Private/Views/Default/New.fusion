@@ -1,0 +1,4 @@
+Milly.CrudUI.Default.new = Milly.CrudUI:Template.New {
+    header.navigation = Milly.CrudUI.Showcase:Views.Navigation
+    header.navigation.@position = 'start'
+}

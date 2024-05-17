@@ -17,6 +17,6 @@ class RecordLabel
     /**
      * @var string
      */
-    public string $name;
+    public string $name = '';
 
 }
