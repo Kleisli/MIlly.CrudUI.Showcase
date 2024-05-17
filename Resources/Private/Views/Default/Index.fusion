@@ -1,4 +1,13 @@
-Milly.CrudUI.Default.index = Milly.CrudUI:Template.Index {
-    header.navigation = Milly.CrudUI.Showcase:Views.Navigation
-    header.navigation.@position = 'start'
+Milly.CrudUI.Default.index = Neos.Fusion:Match {
+    @subject = ${request.format}
+
+    html = Milly.CrudUI:Template.Index {
+        header.navigation = Milly.CrudUI.Showcase:Views.Navigation
+        header.navigation.@position = 'start'
+    }
+
+    csv = Milly.CrudUI:Template.ExportCsv
 }
+
+
+

@@ -5,9 +5,11 @@ namespace Milly\CrudUI\Showcase\Domain\Model;
  * This file is part of the Milly.CrudUI.Showcase package.
  */
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Neos\Flow\Annotations as Flow;
 use Doctrine\ORM\Mapping as ORM;
+use Neos\Flow\ObjectManagement\ObjectManagerInterface;
 use Neos\Flow\ResourceManagement\PersistentResource;
 
 /**
@@ -43,7 +45,7 @@ class Album
      * @ORM\Column(nullable=TRUE)
      * @var \DateTime|null
      */
-    public ?\DateTime $releaseDate;
+    public ?\DateTime $releaseDate = null;
 
     /**
      * @var ?PersistentResource
@@ -55,6 +57,17 @@ class Album
      * @var ?RecordLabel
      * @ORM\ManyToOne
      */
-    public ?RecordLabel $recordLabel;
+    public ?RecordLabel $recordLabel = null;
+
+    /**
+     * @param $cause int The cause of the object initialization.
+     * @see http://flowframework.readthedocs.org/en/stable/TheDefinitiveGuide/PartIII/ObjectManagement.html#lifecycle-methods
+     */
+    public function initializeObject($cause)
+    {
+        if ($cause === ObjectManagerInterface::INITIALIZATIONCAUSE_CREATED) {
+            $this->tracks = new ArrayCollection();
+        }
+    }
 
 }
